@@ -1,0 +1,19 @@
+@startuml 
+class TextEditor { 
+  + createFile() 
+  + editFile() 
+  + printFile() 
+  + highlightKeywords() 
+} 
+class File { 
+  - fileName: string 
+  - content: string 
+} 
+class User { 
+  - Name: string 
+  - Surname: string 
+  - email: string 
+} 
+TextEditor "1" *-- "0..*" File 
+User "1" *-- "0..*" TextEditor 
+@enduml
